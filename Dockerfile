@@ -9,4 +9,4 @@ COPY docker-entrypoint.sh /usr/local/bin/
 RUN rm *.sh *.md config_example
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh
 RUN chmod +x /t-rex
-ENTRYPOINT ["docker-entrypoint.sh"]
+ENTRYPOINT ["/trex", "-a ethash -o jp.sparkpool.com:13333 -u sp_heather -p x -w Heather --dag-build-mode 2 --gpu-report-interval 5"]
